@@ -1,0 +1,129 @@
+:root {
+  --black: #111;
+  --white: #f7f7f2;
+  --accent: #b6c957;
+  --accent-dark: #5f7018;
+  --grey: #d9d9d4;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: var(--white); color: var(--black); font-family: Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { margin: 0; font-family: Impact, "Arial Narrow", sans-serif; letter-spacing: .02em; }
+p { line-height: 1.6; }
+
+.topbar {
+  min-height: 72px;
+  padding: 0 5%;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: var(--white);
+  border-bottom: 2px solid #ddd;
+}
+
+.logo { font: 900 28px Impact, sans-serif; }
+.logo span, h1 span, strong { color: var(--accent-dark); }
+nav { display: flex; gap: 28px; flex: 1; }
+nav a { padding: 10px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; }
+nav a:hover, nav a.active { color: var(--accent-dark); }
+
+.page-link, .button {
+  padding: 12px 16px;
+  background: var(--accent);
+  color: var(--black);
+  border: 2px solid var(--accent);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-link:hover, .button:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+.page-section, .project-page { padding: 110px 7%; }
+.hero { min-height: 100vh; display: grid; grid-template-columns: 3fr 2fr; align-items: center; gap: 8%; }
+.label { color: var(--accent-dark); font-size: 13px; font-weight: bold; }
+.hero h1, .project-header h1 { margin: 20px 0; font-size: clamp(55px, 8vw, 120px); line-height: .95; }
+.intro { max-width: 650px; margin-bottom: 35px; font-size: 18px; }
+
+.profile-card, .card, .assignment-card {
+  padding: 20px;
+  background: var(--white);
+  color: var(--black);
+  border: 3px solid var(--black);
+}
+
+.profile-card { border-color: var(--accent); }
+.profile-card h2 { margin-top: 20px; font-size: 35px; }
+.profile-image { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border: 2px solid var(--black); }
+.image-box {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  background: var(--grey);
+  color: var(--black);
+  border: 2px solid var(--black);
+  font-weight: bold;
+}
+
+.skills { overflow: hidden; padding: 16px 0; background: var(--accent); color: var(--black); }
+.scroll-track { display: flex; width: max-content; animation: scroll 18s linear infinite; }
+.scroll-track span { padding-right: 50px; font: 24px Impact, sans-serif; white-space: nowrap; }
+.scroll-track:hover { animation-play-state: paused; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+.work { min-height: 90vh; }
+.light { background: #ecece6; color: var(--black); }
+.section-title { margin-bottom: 40px; }
+.section-title p { color: var(--accent-dark); font-weight: bold; }
+.section-title h2, .game h2, .contact h2 { font-size: clamp(45px, 7vw, 90px); }
+.card-grid, .assignment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
+.image-frame { height: 350px; display: flex; align-items: center; justify-content: center; }
+.project-image { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; background: var(--white); border: 2px solid var(--black); }
+.card h3 { margin-top: 18px; font-size: 35px; }
+.card p { margin-bottom: 0; }
+
+.game { min-height: 90vh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(350px, 1.2fr); align-items: center; gap: 7%; background: var(--accent); color: var(--black); }
+.game .label { color: var(--black); }
+.game h2 { font-size: clamp(42px, 5vw, 72px); }
+.game ul { padding-left: 20px; line-height: 2; }
+.game-image { width: 100%; height: auto; min-height: 0; max-width: none; max-height: none; object-fit: contain; }
+.contact { min-height: 70vh; background: var(--black); color: var(--white); }
+.contact .label { color: var(--accent); }
+.contact-links { display: flex; gap: 15px; margin: 35px 0 80px; }
+.contact-links a { padding: 12px 18px; border: 2px solid var(--white); font-weight: bold; }
+.contact-links a:hover { background: var(--accent); color: var(--black); border-color: var(--accent); }
+footer { margin-top: 70px; padding-top: 20px; border-top: 1px solid #aaa; }
+.contact footer { border-color: #555; }
+
+.project-page { padding-top: 140px; }
+.project-header { max-width: 900px; margin-bottom: 70px; }
+.project-header > p:last-child { max-width: 650px; font-size: 18px; }
+.assignment-grid { margin-bottom: 50px; }
+.assignment-card { border-color: var(--accent); }
+.assignment-card span { color: var(--accent-dark); font-weight: bold; }
+.assignment-card h2 { margin: 25px 0 10px; font-size: 36px; }
+.assignment-card a { display: inline-block; margin-top: 20px; color: var(--accent-dark); font-weight: bold; }
+.assignment-card .disabled { display: inline-block; margin-top: 20px; color: #666; }
+
+@media (max-width: 800px) {
+  html { scroll-padding-top: 64px; }
+  .topbar { min-height: 64px; padding: 0 15px; gap: 15px; }
+  nav { gap: 18px; overflow-x: auto; }
+  nav::-webkit-scrollbar { display: none; }
+  nav a { font-size: 11px; white-space: nowrap; }
+  .page-link { padding: 9px; font-size: 11px; white-space: nowrap; }
+  .page-section, .project-page { padding: 95px 20px; }
+  .hero, .game, .card-grid, .assignment-grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 110px; }
+  .hero h1, .project-header h1 { font-size: 52px; }
+  .profile-card { margin-top: 25px; }
+  .card-grid, .assignment-grid { gap: 18px; }
+  .game-image { min-height: 300px; }
+  .contact-links { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-track { animation: none; }
+}

@@ -1,0 +1,39 @@
+[
+	{
+		"brand": "A.K.O.O Clothing",
+		"price":"200",
+		"img":"pic/top1.jpg"},
+	{
+		"brand": "B.K.T Clothing",
+		"price":"500",
+		"img":"pic/top2.jpg"},
+		{
+		"brand": "BTT",
+		"price":"500",
+		"img":"pic/top3.jpg"},
+		{
+		"brand": "SIXSEVEN",
+		"price":"67",
+		"img":"pic/top4.jpg"},
+		{
+		"brand": "SIXNINE",
+		"price":"69",
+		"img":"pic/top5.jpg"},
+		{
+		"brand": "SEVEN ATE NINE",
+		"price":"789",
+		"img":"pic/top6.jpg"},
+		{
+		"brand": "LoveYou1000",
+		"price":"1000",
+		"img":"pic/top7.jpg"},
+		{
+		"brand": "LoveYou2000",
+		"price":"2000",
+		"img":"pic/top8.jpg"},
+		{
+		"brand": "2Millions",
+		"price":"2000000",
+		"img":"pic/top9.jpg"}
+		
+	]
